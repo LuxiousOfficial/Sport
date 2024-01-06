@@ -1,0 +1,269 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+header .logo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 7%;
+	background-color: gray;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+header .logo img {
+	width: 10rem;
+}
+
+.navigasi {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 7%;
+	background-color: red;
+	position: fixed;
+	top: 4.6rem;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+.navigasi .search a {
+	font-size: 2rem;
+	text-decoration: none;
+	color: white;
+	transition: 0.5s;
+}
+
+.navigasi .search a:hover {
+	color: gray;
+}
+
+.navigasi .navigasi-nav {
+	display: flex;
+}
+
+.navigasi .navigasi-nav a {
+	font-size: 1.7rem;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: capitalize;
+	margin: 0 1rem;
+	color: white;
+	transition: 0.5s;
+}
+
+.navigasi .navigasi-nav a:hover {
+	color: black;
+}
+
+.navigasi .humberger-menu a {
+	font-size: 2rem;
+	text-decoration: none;
+	color: white;
+	transition: 0.5s;
+}
+
+.navigasi .navigasi-nav a::after {
+	content: '';
+	display: flex;
+	padding-bottom: 0.5rem;
+	border-bottom: 0.2rem solid black;
+	transform: scaleX(0);
+	transition: 0.5s;
+}
+
+.navigasi .navigasi-nav a:hover::after {
+	transform: scaleX(0.5);
+}
+
+.navigasi .humberger-menu a:hover {
+	color: gray;
+}
+
+#humberger-menu {
+	display: none;
+}
+
+.pertama h1 {
+	margin-top: 12rem;
+	margin-bottom: 4rem;
+	text-transform: capitalize;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.pertama h1 span {
+	color: red;
+}
+
+.pertama h2 {
+	margin-top: 3rem;
+	margin-bottom: 4rem;
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 3.5rem;
+	font-weight: bold;
+}
+
+.pertama .kereta {
+	padding: 0 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	text-align: center;
+}
+
+.pertama .kereta .sport {
+	margin: 1rem 1rem;
+	max-width: 30rem;
+	padding: 1.5rem 1rem;
+	background-color: whitesmoke;
+	border: 2px solid black;
+	border-radius: 2rem;
+	transition: 0.3s;
+}
+
+.pertama .kereta .sport:hover {
+	transform: scale(1.05);
+	border-color: red;
+}
+
+.pertama .kereta .sport .nama {
+	font-size: 2.2rem;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.pertama .kereta .sport .hargamulai {
+	font-size: 1.7rem;
+	text-transform: capitalize;
+	margin-top: 0.2rem;
+}
+
+.pertama .kereta .sport .harga {
+	margin-top: 0.2rem;
+	margin-bottom: 1rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.pertama .kereta img {
+	width: 15rem;
+}
+
+.pertama .kereta .sport a {
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: white;
+	background-color: black;
+	border-radius: 1rem;
+	transition: 0.5s;
+}
+
+.pertama .kereta .sport a:hover {
+	color: red;
+}
+
+footer {
+	align-items: center;
+	padding: 1.5rem 7%;
+	text-align: center;
+	background-color: red;
+	color: white;
+	margin-top: 4rem;
+}
+
+footer .policy a {
+	margin: 0 1.5rem;
+	text-decoration: none;
+	text-transform: capitalize;
+	color: white;
+	font-size: 1.5rem;
+	transition: 0.3s;
+}
+
+footer .policy a:hover {
+	color: gray;
+}
+
+footer p {
+	line-height: 1.5;
+	margin-top: 1.5rem;
+	text-align: center;
+	text-transform: capitalize;
+	color: white;
+	font-size: 1.5rem;
+	transition: 0.3s;
+}
+
+@media (max-width: 1200px) {
+	html {
+		font-size: 80%;
+	}
+}
+
+@media (max-width: 992px) {
+	html {
+		font-size: 70%;
+	}
+}
+
+@media (max-width: 768px) {
+	html {
+		font-size: 63%;
+	}
+
+	#humberger-menu {
+		display: inline-block;
+	}
+
+	.navigasi .navigasi-nav {
+		display: block;
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		width: 25rem;
+		height: 100vh;
+		background-color: gray;
+		transition: 0.3s;
+	}
+
+	.navigasi .navigasi-nav.active{
+		right: 0;
+	}
+
+	.navigasi .navigasi-nav a {
+		display: block;
+		margin: 1rem;
+		padding: 0.3rem;
+		font-size: 1.7rem;
+	}
+
+	.navigasi .navigasi-nav a::after {
+		transform-origin: 0 0;
+	}
+
+	.navigasi .navigasi-nav a:hover::after {
+		transform: scaleX(0.2);
+		transition: 0.3s;
+	}
+}
+
+@media (max-width: 450px) {
+	html {
+		font-size: 53%;
+	}
+}
